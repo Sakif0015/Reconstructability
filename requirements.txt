@@ -1,0 +1,9 @@
+# Figure regeneration from saved results needs only these three.
+numpy>=1.24
+scipy>=1.10
+matplotlib>=3.7
+
+# Re-running the experiments additionally needs:
+# torch>=2.0
+# torchvision>=0.15
+# wilds>=2.0        # Camelyon17 only

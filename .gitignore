@@ -1,0 +1,20 @@
+# datasets — never commit these
+data/
+wilds/
+*.zip
+*.tar.gz
+
+# model checkpoints
+*.pth
+*.ckpt
+
+# generated figures (regenerate with scripts/figures_2_and_3_regenerate.py)
+scripts/*.png
+scripts/*.pdf
+
+# python / notebook cruft
+__pycache__/
+*.py[cod]
+.ipynb_checkpoints/
+.DS_Store
+.venv/

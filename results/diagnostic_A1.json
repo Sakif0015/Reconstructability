@@ -1,0 +1,10 @@
+{
+  "hospital": 0,
+  "arm": "Learned (lambda=0.001)",
+  "seed": 0,
+  "repeat_1": 84.0,
+  "repeat_2": 86.2,
+  "within_session_diff": 2.200000000000003,
+  "e4_seed0": 85.63,
+  "p1_seed0": 87.67
+}
