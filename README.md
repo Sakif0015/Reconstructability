@@ -128,17 +128,17 @@ Stated plainly, because they bound what the results mean:
 
 ---
 
-## Citation
+%## Citation
 
-```bibtex
-@misc{alam2026reconstructability,
-  title  = {Reconstructability: A Model-Free Measure of Augmentation--Shift
+%```bibtex
+%@misc{alam2026reconstructability,
+  %title  = {Reconstructability: A Model-Free Measure of Augmentation--Shift
             Compatibility for Federated Medical Imaging Benchmarks},
-  author = {Alam, S. M. Seefat},
-  year   = {2026},
-  note   = {Preprint}
-}
-```
+  %author = {Alam, S. M. Seefat},
+  %year   = {2026},
+  %note   = {Preprint}
+%}
+%```
 
 ## License
 
