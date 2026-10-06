@@ -1,31 +1,3 @@
-# =============================================================================
-# §15 — CAMELYON17 under Taori et al. (2020) robustness metrics
-#
-# WHY THIS CELL EXISTS
-# --------------------
-# Taori's first stated conclusion is that robustness measurements must control
-# for accuracy: apparent robustness gains often just reflect a model doing
-# better on the standard test set. Our Camelyon17 analysis used raw accuracy
-# differences and then noticed post hoc that baseline HEADROOM predicted them
-# (r = +0.93) -- i.e. we hit exactly the confound Taori warns about. Using their
-# metrics turns that liability into a citation.
-#
-# Taori defines two quantities (their Sec. 2):
-#   relative  robustness   tau(f') = acc2(f') - acc2(f)
-#   effective robustness   rho(f)  = acc2(f) - beta(acc1(f))
-# where acc1 = standard (in-distribution) accuracy, acc2 = shifted accuracy,
-# and beta is a baseline fitted over models WITHOUT a robustness intervention.
-#
-# WHAT WE CAN AND CANNOT DO WITH THE DATA WE HAVE
-# -----------------------------------------------
-#   tau  -> COMPUTABLE NOW. Our "advantage over FedAvg" is literally tau.
-#   rho  -> NOT COMPUTABLE. The fold loop set val_loaders = {"heldout": ...},
-#           so acc1 was never measured. PART B below fixes that; it needs a re-run.
-#
-# PART A runs anywhere in seconds (numbers hardcoded from the completed run).
-# PART B is optional and needs the full Camelyon pipeline (~2 h + download).
-# =============================================================================
-
 import numpy as np
 from scipy import stats
 
