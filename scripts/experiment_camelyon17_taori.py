@@ -57,18 +57,6 @@ READ THIS CAREFULLY BEFORE WRITING:
   effective robustness, and cite Taori Sec. 2.
 """)
 
-# ---------------------------------------------------------------------------
-# PART B — effective robustness (needs a re-run; set RUN_PART_B = True)
-# ---------------------------------------------------------------------------
-# The only change from the original fold loop: each fold now holds out an
-# IN-DISTRIBUTION split from the TRAINING hospitals, giving acc1 per model.
-# beta is then fitted over the FedAvg points (the no-intervention models) and
-# rho = acc2 - beta(acc1) measures benefit BEYOND what in-distribution accuracy
-# already buys.
-#
-# Requires: SITES, HOSPITALS, run_federated, evaluate, device  (i.e. the
-# Camelyon setup cell + main cell must have run in this session).
-# Cost: 15 training runs (~2 h at 96 px) if you keep 3 methods x 5 folds.
 
 RUN_PART_B = False
 
