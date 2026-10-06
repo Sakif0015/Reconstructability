@@ -1,21 +1,3 @@
-# =============================================================================
-# §16 — CAMELYON17 with SEEDS: per-fold error bars + variance decomposition
-#
-# The single-seed run gave tau = +5.95 ± 7.55 (n.s., n=5 folds). That +/- is
-# BETWEEN-FOLD heterogeneity (hospital 0 = -2.90, hospital 4 = +15.53), not
-# measurement noise. Seeds therefore tighten each point but should NOT be
-# expected to change significance -- this cell measures that explicitly with a
-# variance decomposition, so the limitation is quantified rather than asserted.
-#
-# What you gain: error bars per fold, per-seed correlations, and a defensible
-# answer to "n=5, one run each?" in review.
-#
-# Requires (in a LIVE session): SITES, HOSPITALS, run_federated, device, and
-# dist_reconstructability from the Camelyon device-fix cell.
-# Cost: 5 folds x 3 methods x 3 seeds = 45 runs, roughly 4.5-6 h at 96 px.
-#       Resumable: completed (fold, method, seed) entries are skipped on re-run.
-# =============================================================================
-
 for _n in ["SITES", "HOSPITALS", "run_federated", "device", "dist_reconstructability"]:
     assert _n in globals(), f"missing {_n} -- run the Camelyon setup + main + device-fix cells"
 
